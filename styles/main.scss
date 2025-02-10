@@ -53,7 +53,7 @@ body {
 // Banner Section
 .banner {
   background: linear-gradient(90deg, #f8f9fa, white);
-  padding: 60px 0;
+  padding: 100px 50px;
   position: relative; /* Ensure the positioning is relative for z-index adjustments */
   z-index: 1; /* Lower z-index so it stays behind the services section */
 }
@@ -68,6 +68,11 @@ body {
   font-size: 1rem;
   margin-top: 10px;
   text-align: start;
+}
+
+.banner-video {
+  padding-top: 180px;
+  padding-left: 50px;
 }
 
 .video {
@@ -112,9 +117,9 @@ body {
 }
 
 .background-layer {
-  top: 170px;
+  top: 200px;
   position: absolute;
-  width: 210.12px;
+  width: 230.12px;
   height: 284.8px;
   background-color: green;
   border-radius: 20px;
@@ -125,13 +130,13 @@ body {
 
 .foreground-layer {
   position: absolute;
-  width: 220px;
-  height: 280px;
+  width: 250px;
+  height: 380px;
   background-color: slategray;
   border-radius: 20px;
   border: 1px solid black; /* Adding a 1px border */
   transform: rotate(-16.63deg);
-  left: 20px;
+  left: 30px;
   top: 120px;
   z-index: 1;
 }
@@ -139,10 +144,29 @@ body {
 .person-img {
   position: relative;
   z-index: 3;
-  height: 400px;
-  width: 700px;
+  height: 480px;
+  width: 450px;
   bottom: 0px;
   margin-bottom: -60px;
+}
+
+.stats {
+  position: relative;
+  top: 150px;
+  left: 100px;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.stats-p {
+  text-align: left;
+  font-size: 1rem;
+  padding-left: 15px;
+  color: #716f73;
+}
+.stats hr {
+  width: 50%;
 }
 
 // Services Section
