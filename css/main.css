@@ -38,18 +38,23 @@ body {
 .banner {
   background: linear-gradient(90deg, #f8f9fa, white);
   padding: 60px 0;
+  position: relative; /* Ensure the positioning is relative for z-index adjustments */
+  z-index: 1; /* Lower z-index so it stays behind the services section */
 }
+
 .banner h1 {
   font-size: 3rem;
   font-weight: bold;
   color: #333;
 }
+
 .banner p {
   font-size: 1rem;
   margin-top: 10px;
   text-align: start;
 }
-.banner .video {
+
+.video {
   width: 200px;
   height: 96px;
   -o-object-fit: cover;
@@ -58,7 +63,8 @@ body {
   margin-bottom: 50px;
   border-radius: 20px;
 }
-.banner .video img {
+
+.video img {
   width: 200px;
   height: 96px;
   -o-object-fit: cover;
@@ -67,25 +73,73 @@ body {
   margin-bottom: 50px;
   border-radius: 20px;
 }
-.banner .happy-client {
+
+.happy-client {
   display: flex;
   align-items: center; /* Vertically aligns image and text */
   justify-content: flex-start; /* Aligns them to the left */
 }
-.banner .happy-client img {
+
+.happy-client img {
   width: 100px;
   margin-right: 10px; /* Optional: Adds some space between the image and text */
 }
-.banner .happy-client span {
+
+.happy-client span {
   font-weight: bold;
   text-align: left; /* Ensures text is aligned to the left */
+}
+
+.banner-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-layer {
+  top: 170px;
+  position: absolute;
+  width: 210.12px;
+  height: 284.8px;
+  background-color: green;
+  border-radius: 20px;
+  transform: rotate(15deg);
+  z-index: 2;
+  right: 25px;
+}
+
+.foreground-layer {
+  position: absolute;
+  width: 220px;
+  height: 280px;
+  background-color: slategray;
+  border-radius: 20px;
+  border: 1px solid black; /* Adding a 1px border */
+  transform: rotate(-16.63deg);
+  left: 20px;
+  top: 120px;
+  z-index: 1;
+}
+
+.person-img {
+  position: relative;
+  z-index: 3;
+  height: 400px;
+  width: 700px;
+  bottom: 0px;
+  margin-bottom: -60px;
 }
 
 .services {
   background-color: #6c47ff;
   text-align: center;
+  z-index: 5;
+  position: relative;
+  margin-top: 0; /* Ensure no space between banner and services section */
 }
-.services .service-item {
+
+.service-item {
   font-size: 1.5rem;
   font-weight: bold;
   padding: 10px 20px;

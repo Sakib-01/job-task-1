@@ -50,75 +50,112 @@ body {
 }
 
 // Banner Section
+// Banner Section
 .banner {
   background: linear-gradient(90deg, #f8f9fa, white);
   padding: 60px 0;
-  h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: $text-color;
-  }
-  p {
-    font-size: 1rem;
-    margin-top: 10px;
-    text-align: start;
-  }
-  .video {
-    width: 200px;
-    height: 96px;
-    object-fit: cover;
-    cursor: pointer;
-    margin-bottom: 50px;
-    border-radius: 20px;
-  }
-  .video img {
-    width: 200px;
-    height: 96px;
-    object-fit: cover;
-    cursor: pointer;
-    margin-bottom: 50px;
-    border-radius: 20px;
-  }
-
-  .happy-client {
-    display: flex;
-    align-items: center; /* Vertically aligns image and text */
-    justify-content: flex-start; /* Aligns them to the left */
-  }
-
-  .happy-client img {
-    width: 100px;
-    margin-right: 10px; /* Optional: Adds some space between the image and text */
-  }
-
-  .happy-client span {
-    font-weight: bold;
-    text-align: left; /* Ensures text is aligned to the left */
-  }
+  position: relative; /* Ensure the positioning is relative for z-index adjustments */
+  z-index: 1; /* Lower z-index so it stays behind the services section */
 }
 
-// Three-column layout
-// .info-section {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   gap: 20px;
-//   .info-item {
-//     flex: 1;
-//     text-align: center;
-//   }
-//   .info-text {
-//     text-align: left;
-//   }
-// }
+.banner h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: $text-color;
+}
+
+.banner p {
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: start;
+}
+
+.video {
+  width: 200px;
+  height: 96px;
+  object-fit: cover;
+  cursor: pointer;
+  margin-bottom: 50px;
+  border-radius: 20px;
+}
+
+.video img {
+  width: 200px;
+  height: 96px;
+  object-fit: cover;
+  cursor: pointer;
+  margin-bottom: 50px;
+  border-radius: 20px;
+}
+
+.happy-client {
+  display: flex;
+  align-items: center; /* Vertically aligns image and text */
+  justify-content: flex-start; /* Aligns them to the left */
+}
+
+.happy-client img {
+  width: 100px;
+  margin-right: 10px; /* Optional: Adds some space between the image and text */
+}
+
+.happy-client span {
+  font-weight: bold;
+  text-align: left; /* Ensures text is aligned to the left */
+}
+
+.banner-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-layer {
+  top: 170px;
+  position: absolute;
+  width: 210.12px;
+  height: 284.8px;
+  background-color: green;
+  border-radius: 20px;
+  transform: rotate(15deg);
+  z-index: 2;
+  right: 25px;
+}
+
+.foreground-layer {
+  position: absolute;
+  width: 220px;
+  height: 280px;
+  background-color: slategray;
+  border-radius: 20px;
+  border: 1px solid black; /* Adding a 1px border */
+  transform: rotate(-16.63deg);
+  left: 20px;
+  top: 120px;
+  z-index: 1;
+}
+
+.person-img {
+  position: relative;
+  z-index: 3;
+  height: 400px;
+  width: 700px;
+  bottom: 0px;
+  margin-bottom: -60px;
+}
 
 // Services Section
 .services {
   background-color: $primary-color;
   text-align: center;
-  .service-item {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 10px 20px;
-  }
+  z-index: 5;
+  position: relative;
+  margin-top: 0; /* Ensure no space between banner and services section */
+}
+
+.service-item {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
 }
